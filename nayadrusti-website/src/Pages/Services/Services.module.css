@@ -1,0 +1,209 @@
+.serviceContainer {
+  width: 100%;
+  min-height: max-content;
+  padding: 15px 120px;
+  /* background-color: #f9f9f9; */
+}
+
+.serviceTitle{
+    padding: 10px;
+    font-size: 2.2rem;
+    font-weight: 500;
+    font-family: system-ui;
+    color: rgb(65, 65, 124);
+}
+
+.serviceTitle::first-letter{
+    font-size: 2.8rem;
+    color: rgb(80, 80, 207);
+}
+
+.serviceCard {
+  display: flex;
+  background-color: #fff;
+  border: 1px solid #96b7ff;
+  box-shadow: 1px 1px 3px 0px blue;
+  margin-top: 40px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.leftCard {
+  width: 30%;
+  position: relative;
+  min-height: 450px;
+}
+
+.leftList {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  position: relative;
+  top: -8px;
+  left: -8px;
+  background: #e8f2fd;
+  width: 100%;
+  min-height: 480px;
+}
+
+.listItem {
+  width: 108%;
+  padding: 20px 16px;
+  font-size: 20px;
+  color: #003366;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+.listItem:hover {
+  color: #0056d2;
+}
+
+.active {
+  background-color: #007bff;
+  color: white !important;
+}
+
+.rightCard {
+  width: 70%;
+  padding: 40px 60px;
+  /* position: relative; */
+  min-height: max-content;
+}
+
+.cardTitle {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.cardDesc {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  padding: 15px 0;
+}
+
+.linksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.linkItem  {
+  text-underline-offset: 4px;
+  text-decoration-color: #0056d2;
+  color: #000;
+  font-size: 16px;
+  padding-left: 10px;
+  line-height: 1.6;
+  display: block;
+  position: relative;
+}
+
+
+.linksGrid a:hover {
+    color: #007bff;
+}
+
+.linkItem::before {
+  content: "▪";
+  color: #0056d2;
+  font-size: 30px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+.linkItem{
+    font-size: 18px !important;
+}
+
+.detailsLink {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0056d2;
+  font-size: 16px;
+  display: inline-block;
+  margin-top: 20px;
+
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.detailsLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .leftCard{
+    width: 45%;
+  }
+
+  .leftList{
+    height: 100%;
+  }
+
+  .rightCard{
+    padding: 15px 25px;
+  }
+
+  .serviceContainer {
+    padding: 10px 20px;
+    padding-top: 25px;
+  }
+
+
+}
+
+
+@media (max-width: 500px) {
+
+    .serviceContainer{
+        padding: 10px 5px;
+        padding-left: 12px;
+    }
+
+    .serviceCard{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .serviceTitle{
+      font-size: 1.4rem;
+      padding: 0;
+    }
+
+    .leftCard,
+    .rightCard{
+        width: 100%;
+    }
+
+    .leftCard{
+        min-height: fit-content;
+    }
+
+    .leftList{
+        min-height: 125px;
+        max-height: fit-content;
+    }
+
+    .cardDesc{
+      text-align: justify;
+    }
+
+    .listItem {
+      width: 101%;
+    }
+
+    .detailsLink {
+      bottom: 10px;
+    }
+
+}
+

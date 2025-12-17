@@ -1,0 +1,185 @@
+.container {
+  padding: 15px 120px;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0 auto;
+
+  padding-block: 60px;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  color: #003366;
+}
+
+.heading::first-letter {
+  font-size: 2.6rem;
+  color: #264bc8;
+}
+
+/* === Client Card === */
+.card {
+  background: #f7fbff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Two-column layout */
+.columns {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.left {
+  flex: 0 0 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.logo {
+  max-height: 40px;
+  object-fit: contain;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.role {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.feedback {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+.rating {
+  font-size: 1.2rem;
+  color: gold;
+  white-space: nowrap;
+
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.emptyStars {
+  color: #ddd;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.links a {
+  color: #007bff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .container {
+    padding: 50px 20px;
+  }
+
+  .left {
+    justify-content: flex-start;
+  }
+
+  .logo {
+    max-height: 32px;
+  }
+
+  .avatar {
+    width: 45px;
+    height: 45px;
+  }
+
+  .name {
+    font-size: 0.95rem;
+  }
+
+  .rating {
+    font-size: 1.1rem;
+  }
+
+  .links {
+    gap: 1.5rem;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .columns {
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+  }
+
+  .left {
+    flex: 0;
+  }
+
+  .feedback{
+    text-align: justify;
+  }
+
+}
+
+
+@media (max-width: 390px) {
+    .links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .links a:last-child{
+    padding-left: 21px;
+  }
+}
+

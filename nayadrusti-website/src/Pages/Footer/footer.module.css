@@ -1,0 +1,88 @@
+.footer {
+  background-color: #051c2c;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.column {
+  flex: 1 1 300px;
+  min-width: 260px;
+}
+
+.column h3 {
+  margin-bottom: 16px;
+  font-size: 18px;
+  color: #ffd700;
+}
+
+.column p,
+.column li, .column li > a {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.column li {
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.column li:hover {
+  color: #ffffff;
+}
+
+.bottom {
+  text-align: center;
+  border-top: 1px solid #334;
+  padding-top: 16px;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+@media (max-width: 800px) {
+  .container {
+    gap: 20px;
+    max-width: 100%;
+  }
+
+  .column {
+    flex: 1 1 220px;
+    min-width: 220px;
+    text-align: center;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .column {
+    margin-bottom: 30px;
+  }
+
+  .column {
+    flex: 1 1 0px;
+    min-width: 260px;
+  }
+}
