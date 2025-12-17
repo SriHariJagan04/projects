@@ -1,0 +1,75 @@
+.dashboardWrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* Top row: toggle + add button */
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.toggleWrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.toggleBtn {
+  padding: 10px 30px;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  background: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggleBtn:hover {
+  background-color: #f0f0f0;
+}
+
+.toggleBtn.active {
+  background-color: #ff7f50;
+  color: white;
+  border-color: #ff7f50;
+}
+
+.addBtn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.addBtn:hover {
+  background-color: #218838;
+}
+
+/* Grid */
+.gridWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .topRow {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .filterWrapper {
+    flex-direction: column;
+  }
+}

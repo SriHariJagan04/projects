@@ -1,0 +1,105 @@
+.navBar {
+    width: 100vw;
+    /* height: 80px; */
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+    background-color: #ee1144bb;
+    color: white;
+
+    box-shadow: 0 0 5px 1px black;
+}
+
+.leftLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Title Styling */
+#title {
+    font-size: 1.1rem;
+    /* color: rgb(236, 249, 122); */
+    color: white;
+    position: relative;
+    top: 10px;
+    margin-left: 10px;
+}
+
+/* Desktop Navigation */
+.navList {
+    list-style-type: none;
+    display: flex;
+}
+
+.navList > li {
+    cursor: pointer;
+    margin: 0 18px;
+    font-size: 20px;
+}
+
+.navList > li a {
+    text-decoration: none;
+    /* color: white; */
+    /* color: rgb(236, 249, 122); */
+    color: white;
+
+    font-weight: 600;
+    text-shadow: 1px 1px black;
+    transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.navList > li a:hover {
+    color: #fbf46a;
+}
+
+/* Active section link */
+.activeLink {
+    font-weight: bold;
+    color: #fbf46a !important;
+    border-bottom: 2px solid #fbf46a;
+    padding-bottom: 5px;
+}
+
+/* Mobile Menu */
+.menuIcon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
+    .navList {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: rgba(30, 30, 30, 0.9);
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navList.active {
+        display: flex;
+        transition: ease-in-out 300ms;
+    }
+
+    .navList > li {
+        margin: 15px 0;
+        font-size: 18px;
+    }
+
+    .menuIcon {
+        display: block;
+    }
+}

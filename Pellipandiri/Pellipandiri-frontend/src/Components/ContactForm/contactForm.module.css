@@ -1,0 +1,104 @@
+/* Global styles */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input,
+textarea {
+  background-color: #ffffffb1;
+  /* outline: none; */
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background-color: #65686b;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.377);
+  overflow: hidden;
+  padding: 2rem;
+}
+
+h1 {
+  margin: 0 0 1.5rem;
+  font-size: 1.5rem;
+  color: #f3f3f3;
+}
+
+/* Form styles */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  background-color: #e14;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 1rem;
+  color: #fff;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #c00;
+}
+
+/* Input fields */
+.textInput,
+.textArea {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.textInput label,
+.textArea label {
+  position: absolute;
+  top: -0.8ch;
+  left: 1ch;
+  padding: 0 0.5ch;
+  pointer-events: none;
+  transition: 0.2s ease;
+  color: #bbae1a;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.labelFocus {
+  top: -0.8rem;
+  font-size: 0.9rem;
+  color: #e14;
+  font-weight: bold;
+  background-color: #ebe5d1;
+  padding: 0 4px;
+}
+
+.textInput input,
+.textArea textarea {
+  display: block;
+  width: 100%;
+  border: 2px solid #c9c5ba;
+  padding: 10px;
+  border-radius: 4px;
+  transition: border 0.2s ease;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.inputFocus {
+  border-color: #e14;
+}
+
+/* TextArea Specific */
+.textArea textarea {
+  height: 120px;
+  resize: none;
+}
+

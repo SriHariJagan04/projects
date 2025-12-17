@@ -1,0 +1,327 @@
+/* GENERAL */
+.mainWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #fff8d0, #ffe680);
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* MAIN BOX */
+.container {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+  position: relative;
+  overflow: hidden;
+  width: 900px;
+  max-width: 100%;
+  min-height: 520px;
+  transition: 0.7s ease-in-out;
+}
+
+/* FORM GENERAL */
+.formContainer {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+form {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 45px;
+  height: 100%;
+  text-align: center;
+  color: #333;  /* 🔥 FIX: makes all text readable */
+}
+
+form h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #222; /* 🔥 FIX: strong readable text */
+}
+
+
+/* ⭐ Show only one form on mobile */
+.activeMobile {
+  display: block !important;
+}
+
+
+/* INPUT FIELDS */
+input {
+  background-color: #fff7cc;
+  border: 1px solid #ffd84d;
+  padding: 14px 16px;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #333;
+  transition: 0.25s;
+}
+
+input::placeholder {
+  color: #6b6b6b; /* 🔥 FIX: visible placeholder text */
+}
+
+input:focus {
+  border-color: #ffbf00;
+  outline: none;
+  background: #fff4b0;
+  box-shadow: 0 0 8px rgba(255, 204, 0, 0.4); /* subtle glow */
+}
+
+/* BUTTONS */
+button {
+  border-radius: 25px;
+  border: 2px solid #ffcc00;
+  background-color: #ffcc00;
+  color: #222;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 13px 42px;
+  text-transform: uppercase;
+  transition: 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.06);
+  background: #ffd738;
+}
+
+/* WHITE OUTLINE BUTTON */
+button.ghost {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  margin-top: .5rem;
+}
+button.ghost:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* FORGOT LINK */
+.forgotLink {
+  font-size: 12px;
+  color: #444;
+  margin: 10px 0;
+  text-decoration: underline;
+}
+
+/* SIGN IN BOX */
+.signInContainer {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+/* WHEN RIGHT PANEL IS ACTIVE */
+.rightPanelActive .signInContainer {
+  transform: translateX(100%);
+}
+
+/* SIGN UP BOX */
+.signUpContainer {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.rightPanelActive .signUpContainer {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+}
+
+/* OVERLAY */
+.overlayContainer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.rightPanelActive .overlayContainer {
+  transform: translateX(-100%);
+}
+
+.overlay {
+  background: linear-gradient(to right, #ffcc00, #ffdf66);
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: 0.6s ease-in-out;
+}
+
+.rightPanelActive .overlay {
+  transform: translateX(50%);
+}
+
+.overlayPanel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  color: #fff;
+}
+
+.overlayPanel h1,
+.overlayPanel p {
+  text-shadow: 0px 1px 3px rgba(0,0,0,0.25);  /* 🔥 FIX: text readable on bright yellow */
+}
+
+/* LEFT PANEL */
+.overlayLeft {
+  transform: translateX(-20%);
+}
+
+.rightPanelActive .overlayLeft {
+  transform: translateX(0);
+}
+
+/* RIGHT PANEL */
+.overlayRight {
+  right: 0;
+}
+
+.rightPanelActive .overlayRight {
+  transform: translateX(20%);
+}
+
+/* MOBILE TOGGLE */
+.mobileToggle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 0;
+}
+
+.mobileToggle button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid #ffcc00;
+  background: #fff8cc;
+  color: #333;
+  font-weight: bold;
+  transition: 0.25s;
+}
+
+.mobileToggle button:hover {
+  background: #ffe68a;
+}
+
+.activeBtn {
+  background: #ffcc00 !important;
+  color: #222 !important;
+}
+
+
+
+.loader {
+  border: 3px solid #fff;
+  border-top: 3px solid #ffcc00;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingBtn {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+
+/* ------------------------------------------- */
+/* 🔥 MOBILE RESPONSIVENESS */
+/* ------------------------------------------- */
+
+@media (max-width: 850px) {
+  .container {
+    width: 100%;
+    min-height: 350px;
+  }
+
+  /* Overlay removed for mobile */
+  .overlayContainer {
+    display: none;
+  }
+
+  /* Signin & Signup become full width */
+  .signInContainer,
+  .signUpContainer {
+    width: 100%;
+    position: relative;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  form {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 850px) {
+  .formContainer {
+    display: none;     /* hide both initially */
+    width: 100%;
+    left: 0;
+    opacity: 1 !important;
+    transform: none !important;
+    position: relative;
+  }
+
+  .activeMobile {
+    display: block !important; /* only active form will be shown */
+  }
+
+  .overlayContainer {
+    display: none !important;
+  }
+}
+
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  input {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px 28px;
+    font-size: 13px;
+  }
+}

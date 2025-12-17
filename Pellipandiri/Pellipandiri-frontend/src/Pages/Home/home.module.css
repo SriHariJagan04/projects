@@ -1,0 +1,97 @@
+.homeContainer {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    padding: 0 20px;
+    /* background-color: #fff; */
+
+}
+
+.homeHeading {
+    font-size: 3rem;
+    padding: 10px 0;
+    color: rgb(255, 255, 255);
+    /* text-shadow: 1px 1px #3c3c3c; */
+    text-align: center;
+}
+
+/* Small heading (WEDDING PLANNER) */
+.homeHeading h3 {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 1rem;
+    padding: 5px 10px;
+    position: relative;
+}
+
+/* Left & Right lines around h3 */
+.homeHeading h3::before,
+.homeHeading h3::after {
+    content: "";
+    position: absolute;
+    top: 49%;
+    width: 40px;
+    height: 2px;
+    background-color: rgb(180, 195, 50);
+}
+
+.homeHeading h3::before {
+    left: -50px;
+}
+
+.homeHeading h3::after {
+    right: -50px;
+}
+
+/* Main heading (Your Dream Wedding) */
+.homeHeading b {
+    font-size: 5rem;
+    display: block;
+    /* text-shadow: -2px -2px 0 rgba(0, 0, 0, 0.445), 
+                 2px -2px 0 rgba(0, 0, 0, 0.379), 
+                 -2px 2px 0 rgba(0, 0, 0, 0.352), 
+                 2px 2px 0 rgba(0, 0, 0, 0.385); */
+
+    text-shadow: 1.1px 1.1px black;
+}
+
+/* 🔹 Responsive Design 🔹 */
+@media only screen and (max-width: 1024px) {
+    .homeHeading b {
+        font-size: 4rem;
+    }
+    .homeHeading h3::before {
+        left: -40px;
+    }
+    .homeHeading h3::after {
+        right: -40px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .homeHeading b {
+        font-size: 3.5rem;
+    }
+    .homeHeading h3::before {
+        left: -35px;
+    }
+    .homeHeading h3::after {
+        right: -35px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .homeContainer {
+        height: 70vh;
+    }
+
+    .homeHeading b {
+        font-size: 2.8rem;
+    }
+}

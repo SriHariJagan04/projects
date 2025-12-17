@@ -1,0 +1,174 @@
+.filterWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  transition: all 0.3s;
+}
+
+.filterItem {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 220px;
+  min-width: 200px;
+  position: relative;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+input[type="text"], select {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #ff7f50;
+  box-shadow: 0 0 5px rgba(255, 127, 80, 0.4);
+}
+
+/* Suggestions */
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 12px 12px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 10;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestions li {
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.suggestions li:hover {
+  background-color: #ff7f50;
+  color: #fff;
+}
+
+/* Slider */
+.sliderContainer {
+  position: relative;
+  height: 50px;
+  margin-top: 15px;
+}
+
+.sliderTrack {
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: #ddd;
+  top: 22px;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.sliderRange {
+  position: absolute;
+  height: 6px;
+  background: #231a17;
+  top: 22px;
+  border-radius: 3px;
+  z-index: 2;
+}
+
+
+.thumb {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  -webkit-appearance: none;
+  pointer-events: none;
+}
+
+.thumb::-webkit-slider-thumb {
+  pointer-events: all;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ff7f50;
+  border: 2px solid #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: transform 0.2s;
+}
+
+.thumb:hover::-webkit-slider-thumb {
+  transform: scale(1.3);
+}
+
+.thumb::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ff7f50;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+/* Thumb Value Indicators */
+.thumbValue {
+  position: absolute;
+  top: -18px;
+  transform: translateX(-50%);
+  background: #ff7f50;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  z-index: 5;
+  white-space: nowrap;
+}
+
+
+/* Labels above thumbs */
+.label {
+  position: absolute;
+  top: -28px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  white-space: nowrap;
+}
+
+.leftLabel {
+  z-index: 6;
+}
+
+.rightLabel {
+  z-index: 7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filterWrapper {
+    flex-direction: column;
+  }
+  .filterItem {
+    width: 100%;
+  }
+}

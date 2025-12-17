@@ -1,0 +1,81 @@
+.contactItem{
+    width: 240px;
+    height: 185px;
+    background-color: #65686b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px .5px rgba(0, 0, 0, 0.096);
+    transition: all 300ms;
+
+    /* color: #fff; */
+}
+
+.contactItem:hover{
+    scale: 1.05;
+    box-shadow: 0 0 10px .5px rgba(0, 0, 0, 0.418);
+
+    p{
+
+        color: #00ccc8;
+    }
+}
+
+
+.contactItem> i{
+    font-size: 2rem;
+    background-color: rgba(117, 117, 117, 0.652);
+    padding: 15px 20px;
+    border-radius: 50%;
+    color: #ffffffd1;
+
+    transition: all 400ms;
+}
+
+.contactItem> b{
+    font-size: 22px;
+    margin: 2px 0;
+    text-transform: capitalize;
+    color: rgb(246, 240, 135);
+} 
+
+.contactItem> p{
+    white-space: pre-wrap;
+    padding: 4px 5px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+.address:hover> i{
+    background-color: #e0ebf6c4;
+    color: #68b4ff;
+}
+
+.call:hover> i{
+    background-color: #e0ebf6c4;
+    color: #e67e22;
+}
+
+.email:hover> i{
+    background-color: #e0ebf6c4;
+    color: #27ae60;
+}
+
+.instagram:hover> i{
+    background-color: #e0ebf6c4;
+    color: #c13584;
+}
+
+
+@media screen and (max-width: 800px) {
+    .contactItem{
+        width: 280px;
+        height: 200px;
+    }
+}
