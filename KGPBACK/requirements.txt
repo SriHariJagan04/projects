@@ -1,0 +1,8 @@
+pandas
+openpyxl
+xlrd
+pyqt6
+
+
+
+# pyinstaller --noconsole --onefile --name "KGPBACK" --add-data "KGPBACK.exe;." kgpback_automation.py

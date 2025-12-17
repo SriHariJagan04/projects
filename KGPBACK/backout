@@ -1,0 +1,30 @@
+ #####################################################
+ #         !!!  THANKS FOR USING KGPBACK  !!!        #
+ #             THE RESULTS ARE GIVEN BELOW           #
+ #####################################################
+ 
+ ################
+ #  INPUT DATA  #
+ ################
+ No.of Layers                             =  3
+ FWD Load (N)                             = 40000.00
+ Contact Pressure (MPa)                   =  .56
+ No.of Deflection points                  =  7
+ Deflections measured using FWD (mm)      =  .32844   .27433   .23592   .19401   .15083   .09454   .06146
+ Radial distances from centre of load(mm) =    .0  200.0  300.0  450.0   600.0   900.0  1200.0
+ Layer thickness (mm)                     = 215.00 415.00
+ Poisson ratio values                     = .50 .40 .40
+ Layer Modulus (MPa) Ranges Selected :-
+ (a) Bituminous Surfacing                 =  750.0   3000.0
+ (b) Granular Base                        =  100.0   500.0
+ (c) Subgrade                             =   20.0   100.0
+ 
+ 
+ ################
+ # OUTPUT DATA  #
+ ################
+ 
+ Backcalculated Layer Moduli are:
+ Surface (MPa)  =    1266.9
+ Base (MPa)     =     274.4
+ Subgrade (MPa) =     100.0
